@@ -34,6 +34,10 @@ header {
   border-bottom: 1px solid #ececec;
 }
 
+img {
+  display: block;
+}
+
 .list {
   list-style: none;
 }
@@ -143,6 +147,8 @@ nav {
 .hero {
   background-color: #2f303a;
   text-align: center;
+  padding-top: 200px;
+  padding-bottom: 200px;
 }
 
 .hero-title {
@@ -191,14 +197,31 @@ nav {
   padding-top: 0;
 }
 
+/* hidden titles */
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 /* features */
 .features {
   display: flex;
-  justify-content: space-between;
 }
 
 .features .item {
   width: 270px;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .features .title {
@@ -230,10 +253,6 @@ nav {
 
 .directions-list .item:nth-child(3n) {
   margin-right: 0px;
-}
-
-.directions-list .item img {
-  display: block;
 }
 
 /* button */
@@ -275,8 +294,6 @@ nav {
 
 /* member photo */
 .member-photo {
-  padding-bottom: 30px;
-  display: block;
 }
 
 /* member name */
@@ -285,7 +302,6 @@ nav {
   font-size: 16px;
   line-height: 1.18;
   margin-bottom: 10px;
-  text-align: center;
 }
 
 /* должности */
@@ -293,7 +309,12 @@ nav {
   color: var(--secondary-text-color);
   font-size: 16px;
   line-height: 1.18;
+}
+
+.member-description {
   text-align: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 
 /* footer */
@@ -308,10 +329,11 @@ nav {
 .logo-bottom {
   color: var(--white-color);
 }
-
-.full-logo-bottom {
+.footer .logo {
+  display: block;
   margin-bottom: 20px;
 }
+
 /* street adress */
 .street {
   color: var(--white-color);
@@ -348,14 +370,8 @@ nav {
   display: flex;
   justify-content: center;
 }
-.portfolio-buttons .item {
+.portfolio-buttons .item:not(:last-child) {
   margin-right: 8px;
-}
-
-/* card image */
-.card-img {
-  margin-bottom: 20px;
-  display: block;
 }
 
 /* projects 2nd page */
@@ -365,13 +381,16 @@ nav {
   flex-wrap: wrap;
 }
 
+/* card image */
+.card-img {
+}
+
 /* card */
 
 .card {
   width: calc((100% - 60px) / 3);
   margin-right: 30px;
   margin-bottom: 30px;
-  border: 1px solid #eeeeee;
 }
 
 .card:nth-child(3n) {
@@ -382,14 +401,21 @@ nav {
   margin-bottom: 0;
 }
 
+.project-description {
+  padding-top: 20px;
+  padding-left: 24px;
+  padding-bottom: 20px;
+  border-right: 1px solid #eeeeee;
+  border-bottom: 1px solid #eeeeee;
+  border-left: 1px solid #eeeeee;
+}
+
 .project-name {
   color: var(--primary-text-color);
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
-  margin-bottom: 4px;
-  padding-left: 24px;
 }
 
 /* product type */
@@ -398,6 +424,4 @@ nav {
   color: var(--secondary-text-color);
   font-size: 16px;
   line-height: 1.87;
-  padding-left: 24px;
-  padding-bottom: 20px;
 }
